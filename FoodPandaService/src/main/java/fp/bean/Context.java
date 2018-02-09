@@ -29,4 +29,12 @@ public class Context {
     public Map<String, String[]> getParameterMap() {
         return parameterMap;
     }
+
+    public HttpServletRequest getHttpServletRequest() {
+        return httpServletRequest;
+    }
+
+    public HttpServletResponse getHttpServletResponse() {
+        return httpServletResponse;
+    }
 }

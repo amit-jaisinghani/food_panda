@@ -16,11 +16,12 @@ public class FoodPandaServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         long startTime = System.currentTimeMillis();
         initiateContent(req, resp);
-        PrintWriter writer = resp.getWriter();
-        writer.write("Api response: " + ThreadContext.getThreadLocalContext().getUuid()+"<br>");
-        writer.write("Parameters: " + ThreadContext.getThreadLocalContext().getParameterMap());
-        writer.close();
+        generateGetResponse();
         System.out.println("Request time: " + (System.currentTimeMillis() - startTime));
+    }
+
+    private void generateGetResponse() {
+
     }
 
     @Override
@@ -35,5 +36,14 @@ public class FoodPandaServlet extends HttpServlet {
 
     private void initiateContent(HttpServletRequest req, HttpServletResponse resp){
         ThreadContext.setThreadLocalContext(new Context(req, resp));
+    }
+
+    public void writeAndFlushResponse(String response) {
+        try (PrintWriter writer = ThreadContext.getThreadLocalContext().getHttpServletResponse().getWriter()) {
+            writer.write(response);
+            writer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
