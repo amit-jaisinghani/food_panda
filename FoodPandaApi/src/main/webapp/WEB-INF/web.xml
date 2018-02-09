@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>FoodPandaServlet</servlet-name>
+    <servlet-class>api.panda.FoodPandaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FoodPandaServlet</servlet-name>
+    <url-pattern>/fp_api</url-pattern>
+  </servlet-mapping>
+
 </web-app>
