@@ -5,7 +5,10 @@
   <groupId>test</groupId>
   <artifactId>food-panda</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <modules>
+    <module>FoodPandaApi</module>
+  </modules>
+  <packaging>pom</packaging>
 
   <name>food-panda</name>
   <url>http://maven.apache.org</url>
