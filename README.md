@@ -1,30 +1,30 @@
 # food_panda
-A RESTful web service for restaurant search and discovery service.
+A RESTful web service for restaurant search and discovery service.<br>
 
-Installation required:
-Java 8
-mysql
-redis
-maven
-git
+Installation required:<br>
+Java 8<br>
+mysql<br>
+redis<br>
+maven<br>
+git<br>
 
-How to setup:
-Step 1:
-Edit database config and Run: FoodPanda/FoodPandaService/src/main/java/fp/db/Setup.java
-This file will setup database by installing few tables and create entries in these tables.
+How to setup:<br>
+Step 1:<br>
+Edit database config and Run: FoodPanda/FoodPandaService/src/main/java/fp/db/Setup.java<br>
+This file will setup database by installing few tables and create entries in these tables.<br>
 
-Step 2:
-Run tomcat using maven plugin.
+Step 2:<br>
+Run tomcat using maven plugin.<br>
 
-Thats it.
+Thats it.<br>
 
-How to use:
-App is in progress. I will add on APIs.
-working:
-http://localhost:8080/foodpanda/fp_api 
+How to use:<br>
+App is in progress. I will add on APIs.<br>
+working:<br>
+http://localhost:8080/foodpanda/fp_api <br>
 
-Pending:
-GET:
-http://localhost:8080/foodpanda/restaurant
-http://localhost:8080/foodpanda/menu/<restaurant_id>
-http://localhost:8080/foodpanda/items/<menu_id>
+Pending:<br>
+GET:<br>
+http://localhost:8080/foodpanda/restaurant <br>
+http://localhost:8080/foodpanda/menu/<restaurant_id> <br>
+http://localhost:8080/foodpanda/items/<menu_id> <br>
