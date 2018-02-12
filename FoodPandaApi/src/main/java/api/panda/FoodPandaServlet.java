@@ -21,7 +21,7 @@ public class FoodPandaServlet extends HttpServlet {
     }
 
     private void generateGetResponse() {
-
+        writeAndFlushResponse("Unique request id: " + ThreadContext.getThreadLocalContext().getUuid());
     }
 
     @Override
@@ -39,7 +39,8 @@ public class FoodPandaServlet extends HttpServlet {
     }
 
     public void writeAndFlushResponse(String response) {
-        try (PrintWriter writer = ThreadContext.getThreadLocalContext().getHttpServletResponse().getWriter()) {
+        try (PrintWriter writer = ThreadContext.getThreadLocalContext()
+                .getHttpServletResponse().getWriter()) {
             writer.write(response);
             writer.flush();
         } catch (IOException e) {
